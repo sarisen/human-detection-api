@@ -252,7 +252,7 @@
             formData.append('image', selectedFile);
 
             try {
-                const response = await fetch('http://localhost:3000/detect-human', {
+                const response = await fetch('/detect-human', {
                     method: 'POST',
                     body: formData
                 });
