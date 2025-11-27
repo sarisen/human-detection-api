@@ -88,7 +88,7 @@ app.post('/detect-human', upload.single('image'), async (req, res) => {
     tensor.dispose();
 
     const humanDetected = predictions.some(prediction =>
-      prediction.class === 'person' && prediction.score > 0.5
+      prediction.class === 'person' && prediction.score > 0.75
     );
 
     await fs.unlink(imagePath);
